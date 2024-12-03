@@ -1,7 +1,7 @@
 <template>
     <div class="introduction">
       <h1>Hello, I'm {{ name }}!</h1>
-      <p>I am a {{ profession }} based in {{ location }}.</p>
+      
       <p>{{ bio }}</p>
       <p>Feel free to reach out: <a :href="'mailto:' + email">{{ email }}</a></p>
     </div>
@@ -11,11 +11,10 @@
   export default {
     data() {
       return {
-        name: "Your Name",
-        profession: "Your Profession", // e.g., Software Developer
-        location: "Your Location", // e.g., New York, USA
-        bio: "Brief introduction about yourself. For example, 'I am passionate about coding, creating innovative solutions, and continuously learning new skills.'",
-        email: "youremail@example.com"
+        name: "Nguyen Huu Quan",
+        
+        bio: "This is a coursework in Course 	Web Programming 2(COMP1842) ",
+        email: "quannhgcs220513@fpt.edu.vn"
       };
     }
   };

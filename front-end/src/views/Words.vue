@@ -5,9 +5,9 @@
       <table id="words" class="ui celled compact table">
         <thead>
           <tr>
-            <th>English</th>
-            <th>German</th>
-            <th>French</th>
+            <th class="center aligned">English <i class="united kingdom flag"></i></th>
+            <th class="center aligned">German <i class="de flag"></i></th>
+            <th class="center aligned">French <i class="fr flag"></i></th>
             <th colspan="3"></th>
           </tr>
         </thead>

@@ -34,7 +34,7 @@ export const api = {
   getWords: handleError(async () => {
     const res = await axios.get(baseURL);
     console.log(res.data); 
-    return res.data;
+    return res.data;//
   }),
   deleteWord: handleError(async id => {
     const res = await axios.delete(baseURL + id);

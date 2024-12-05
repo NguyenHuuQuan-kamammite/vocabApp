@@ -42,7 +42,7 @@
     },
     data() {
       return {
-        randWords: [...this.words.sort(() => 0.5 - Math.random())],
+        randWords: [...this.words.sort(() => 0.5 - Math.random())],//Danh sách từ ngẫu nhiên
         incorrectGuesses: [],
         result: '',
         resultClass: '',
@@ -62,20 +62,21 @@
         // Check if both English and French inputs are correct
         const isEnglishCorrect = this.english.toLowerCase() === this.currWord.english.toLowerCase();
         const isFrenchCorrect = this.french.toLowerCase() === this.currWord.french.toLowerCase();
+        
   
         if (isEnglishCorrect && isFrenchCorrect) {
           this.flash('Correct!', 'success', { timeout: 1000 });
           this.score += 1;
         } else {
           this.flash('Wrong!', 'error', { timeout: 1000 });
-          this.incorrectGuesses.push(`${this.currWord.german} (Expected: English - ${this.currWord.english}, French - ${this.currWord.french})`);
+          this.incorrectGuesses.push(`${this.currWord.german} (Expected: German -${this.currWord.german}, English - ${this.currWord.english}, French - ${this.currWord.french})`);
         }
   
         // Reset input fields and move to the next word
         this.english = '';
         this.french = '';
         this.randWords.shift();
-  
+        
         // Check if the test is over
         if (this.randWords.length === 0) {
           this.testOver = true;
